@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Directed-graph with incidence matrix.
+ * Directed-graph with orthogonal list.
  * 
  * @author Joson
  *
