@@ -5,12 +5,13 @@ package com.josonprog.common.graph;
 
 
 /**
- * 
+ * Orthogonal list entry for node.
  * 
  * @author Joson
  *
  */
 public class OrthNodeEntry<E extends Node> {
+	
 	private E node = null;
 	
 	private OrthArcEntry<E> firstInLink = null;
@@ -47,6 +48,14 @@ public class OrthNodeEntry<E extends Node> {
 		this.firstOutLink = firstOutLink;
 	}
 
+	public boolean isNode(E node) {
+		if (this.node == null) 
+			return node == null;
+		else
+			return this.node.equals(node);
+		
+	}
+	
 	/**
 	 * 
 	 * 
@@ -79,5 +88,15 @@ public class OrthNodeEntry<E extends Node> {
 		}
 		
 	}
+
+	@Override
+	public int hashCode() {
+		if (this.node == null) {
+			return 0;
+		}
+		return this.node.hashCode();
+	}
+	
+	
 }
 

@@ -12,13 +12,25 @@ import java.util.List;
 public interface Graph<N extends Node> {
 
 	/**
+	 * @param node
+	 * @return
+	 */
+	public boolean addNode(N node);
+
+	/**
+	 * @param node
+	 * @return
+	 */
+	public boolean containsNode(N node);
+
+	/**
 	 * tests whether there is an arc from node A to node B.
 	 * 
 	 * @param nodeA
 	 * @param nodeB
 	 * @return
 	 */
-	public boolean adjacent(N nodeA, N nodeB);
+	public boolean hasArc(N nodeA, N nodeB);
 	
 	/**
 	 * lists all nodes nodeB such that there is an arc from nodeA to nodeB.
@@ -35,7 +47,7 @@ public interface Graph<N extends Node> {
 	 * @param nodeB
 	 * @return
 	 */
-	public boolean add(N nodeA, N nodeB);
+	public boolean addArc(N nodeA, N nodeB);
 	
 	
 	/**
@@ -45,6 +57,7 @@ public interface Graph<N extends Node> {
 	 * @param nodeB
 	 * @return
 	 */
-	public int delete(N nodeA, N nodeB);
+	public int removeArc(N nodeA, N nodeB);
+
 	
 }

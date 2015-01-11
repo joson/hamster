@@ -4,6 +4,8 @@
 package com.josonprog.common.graph;
 
 /**
+ * Orthogonal list entry for arc.
+ * 
  * @author Joson
  *
  */
